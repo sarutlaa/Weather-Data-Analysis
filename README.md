@@ -150,6 +150,17 @@ The specified endpoint accesses a collection of entries from the weather_statist
 ## APIs Implementation Results
 
 I utilized Postman for testing the functionality of my API endpoints, ensuring data retrieval operations performed as expected. Additionally, Swagger was employed to document the API, providing a clear and interactive interface for exploring its capabilities.
+### Screenshots
+1. GET method to access [http://127.0.0.1:5000/weather/api](http://localhost:5000/api/weather)
+![postman_weather_api](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/10dc0038-e225-4cd1-9e4d-3fe4f5676069)
+2. GET method to access [http://127.0.0.1:5000/weather/api](http://localhost:5000/api/weather/?date=1985-01-01&station_id=USC00332098)
+![postman_weather_api_param](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/31c1ba1c-a69a-4b28-9522-f8f6dd5729bd)
+3. GET method to access [http://127.0.0.1:5000/weather/api/stats](http://localhost:5000/api/weather/stats)
+- ![postman_warther_api_stats](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/2cd268c2-1584-4faa-8d8d-84be3176f3e4)
+4. GET method to access http://localhost:5000/api/weather/stats?year=1985&station_id=USC00253660
+-![postman_weather_api_stats_param](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/96829b12-06a3-43d7-b16d-530428ef2c73)
+
+
 ## APIs Unit Testing
 
 For unit testing, apis_unit_testing.py imports app.py to conduct tests on the query parameters specified for both API endpoints. This process utilizes pytest, TestCase, and the flask_testing Python libraries.
