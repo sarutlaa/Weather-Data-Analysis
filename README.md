@@ -127,11 +127,10 @@ By executing app.py present in the weather_api directory, the application initia
 The specified endpoint fetches a collection of records from the weather_data table within the corteva database. Users can manage the output using pagination and apply filters based on the parameters outlined below.
 
 
-Add the table here
-
 ```http
   GET /api/weather/stats
 ```
+
 | Query Parameters | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `page` | `integer` | Optional. The page number of the results. Default is 1|
