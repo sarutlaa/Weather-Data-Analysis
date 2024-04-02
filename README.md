@@ -39,7 +39,7 @@ CREATE TABLE weather_data (
 * min_temp: Minimum temperature for the day (in degrees Celsius)
 * precipitation: Total precipitation for the day (in centimeters)
 * station_id: Unique identifier for the weather station (NOT NULL)
-* unique_date_station : Ensures that there are no duplicate entries for a combination of date and station_id
+* unique_date_station : Ensures that there are no duplicate entries for a combination of date and station_id.This constraint ensures that there are no duplicate entries for a combination of date and station_id, preventing redundancy and ensuring data integrity, especially when the code is executed multiple times.
 
 
 
@@ -48,7 +48,8 @@ CREATE TABLE weather_data (
 ## Task 2 : Data Ingestion
 
 
-The data files from wx_data were replicated locally after being sourced from the specified GitHub repository. The task of data ingestion in batches is performed by the Data_Ingestion.ipynb Python notebook. A total of 1,729,957 records were processed, with the start_time, end_time, duration of data ingestion as shown below.
+The data files from the wx_data repository on GitHub were replicated locally for further processing. The data ingestion process was orchestrated by the Data_Ingestion.ipynb Python notebook. During the ingestion, missing records represented by -9999 were replaced with NULL values. Additionally, the temperature values were originally in tenths of a degree Celsius, but they were converted to degrees Celsius to match the database format. Similarly, precipitation values, originally in tenths of millimeters, were converted to centimeters.
+A total of 1,729,957 records were processed, with the start_time, end_time, duration of data ingestion as shown below.
 
 
 
@@ -62,7 +63,7 @@ The data files from wx_data were replicated locally after being sourced from the
 
 
 ## Task 3: Data Analysis
-The required aggrgations have been performed and stored in another table called weather_statistics whose schema is as below. 
+The necessary aggregations have been computed and stored in a separate table named weather_statistics whose schema is defined as below.
 
 ```ruby
 CREATE TABLE weather_statistics (
@@ -82,7 +83,7 @@ CREATE TABLE weather_statistics (
 * avg_max_temp: Average maximum temperature for the year (in degrees Celsius)
 * avg_min_temp: Average minimum temperature for the year (in degrees Celsius)
 * total_precipitation: Total accumulated precipitation for the year (in centimeters)
-* unique_station_year: Ensures that there are no duplicate entries for a combination of station_id and year 
+* unique_station_year: Ensures that there are no duplicate entries for a combination of station_id and year. This constraint ensures that there are no duplicate entries for a combination of station_id and year, preventing redundancy and ensuring data integrity in the context of the weather data.
 
 The aggrgations have been performed and then ingested into weather_statistics table in the Data_Analysis.ipynb file. In total 4791 records have been processed and stored. Records with missing values have been ignored.
 
