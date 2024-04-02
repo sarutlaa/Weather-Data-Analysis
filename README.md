@@ -48,7 +48,7 @@ CREATE TABLE weather_data (
 ## Task 2 : Data Ingestion
 
 
-The data files from the wx_data repository on GitHub were replicated locally for further processing. The data ingestion process was orchestrated by the Data_Ingestion.ipynb Python notebook. During the ingestion, missing records represented by -9999 were replaced with NULL values. Additionally, the temperature values were originally in tenths of a degree Celsius, but they were converted to degrees Celsius to match the database format. Similarly, precipitation values, originally in tenths of millimeters, were converted to centimeters.
+The data files from the wx_data repository on GitHub were replicated locally for further processing. The data ingestion process was orchestrated by the Data_Ingestion.ipynb Python notebook. During the ingestion, missing records represented by -9999 were replaced with NULL values. Additionally, the temperature values were originally in tenths of a degree Celsius, but they were converted to degrees Celsius to match the database format. Dates were formatted into the YYYY-MM-DD standard. . Similarly, precipitation values, originally in tenths of millimeters, were converted to centimeters.
 A total of 1,729,957 records were processed, with the start_time, end_time, duration of data ingestion as shown below.
 
 
