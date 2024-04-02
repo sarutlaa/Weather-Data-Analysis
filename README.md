@@ -202,6 +202,6 @@ In the unit testing script apis_unit_testing.py, the Flask application from app.
 Running these tests ensures that the API handles query parameters correctly and the endpoints are functioning as expected. The pytest.main() call at the end of the script triggers the execution of the tests when the script is run. All the testcases passed succesfully with the result as shown below.
 
 
-    ![unittest](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/52ca9284-b627-44e6-8b51-75bacfcdd834)
+  ![unittest](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/52ca9284-b627-44e6-8b51-75bacfcdd834)
 
 ## Approach for AWS Deployment
