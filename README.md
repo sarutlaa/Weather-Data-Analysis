@@ -86,7 +86,7 @@ CREATE TABLE weather_statistics (
 * total_precipitation: Total accumulated precipitation for the year (in centimeters)
 * unique_station_year: Ensures that there are no duplicate entries for a combination of station_id and year. This constraint ensures that there are no duplicate entries for a combination of station_id and year, preventing redundancy and ensuring data integrity in the context of the weather data.
 
-The aggrgations( Average maximum temperature , Average minimum temperature , Total accumulated precipitation  for each year and for every station) have been performed and then ingested into weather_statistics table in the Data_Analysis.ipynb file. In total 4791 records have been processed and stored. Records with missing values have been ignored.
+The aggrgations( Average maximum temperature , Average minimum temperature , Total accumulated precipitation  for each year and for every station) have been performed and then ingested into weather_statistics table in the Data_Analysis.ipynb file. In total 4791 records have been processed and stored. Records with missing values have been ignored. The logging information is as shown below.
 
 
 <img width="724" alt="data_ingestion2" src="https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/99d362f8-aa67-4493-878e-0d0332a2a365">
@@ -158,13 +158,18 @@ Utilizing Postman to assess the functionality of Weather API.
 1. GET method to access [http://127.0.0.1:5000/weather/api](http://localhost:5000/api/weather)
     
     ![postman_weather_api](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/10dc0038-e225-4cd1-9e4d-3fe4f5676069)
-3. GET method to access [http://127.0.0.1:5000/weather/api](http://localhost:5000/api/weather/?date=1985-01-01&station_id=USC00332098)
+   
+2. GET method to access [http://127.0.0.1:5000/weather/api](http://localhost:5000/api/weather/?date=1985-01-01&station_id=USC00332098)
+   
    *Date : 1985-01-01, station_id : USC00332098*
     ![postman_weather_api_param](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/31c1ba1c-a69a-4b28-9522-f8f6dd5729bd)
-4. GET method to access [http://127.0.0.1:5000/weather/api/stats](http://localhost:5000/api/weather/stats)
+   
+3. GET method to access [http://127.0.0.1:5000/weather/api/stats](http://localhost:5000/api/weather/stats)
 
     ![postman_warther_api_stats](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/2cd268c2-1584-4faa-8d8d-84be3176f3e4)
+   
 4. GET method to access http://localhost:5000/api/weather/stats?year=1985&station_id=USC00253660
+5. 
    *year = 1985, station_id : USC00253660*
     ![postman_weather_api_stats_param](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/96829b12-06a3-43d7-b16d-530428ef2c73)
 
