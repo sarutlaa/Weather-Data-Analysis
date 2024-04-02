@@ -120,16 +120,13 @@ By executing app.py present in the weather_api directory, the application initia
 
 #### Get all items
 
+
+The specified endpoint fetches a collection of records from the weather_data table within the corteva database. Users can manage the output using pagination and apply filters based on the parameters outlined below.
+
 ```http
   GET /api/weather
 ```
 
-The specified endpoint fetches a collection of records from the weather_data table within the corteva database. Users can manage the output using pagination and apply filters based on the parameters outlined below.
-
-
-```http
-  GET /api/weather/stats
-```
 
 | Query Parameters | Type     | Description                |
 | :-------- | :------- | :------------------------- |
@@ -138,7 +135,11 @@ The specified endpoint fetches a collection of records from the weather_data tab
 | `date` | `string` |Optional. Filters results to this specific date (format: YYYY-MM-DD)|
 | `station_id` | `string` | Optional. Filters results to the specified station ID|
 
-The specified endpoint accesses a collection of entries from the weather_statistics table in the corteva database. It allows for response manipulation through pagination and utilizes the following parameters for filtering.
+
+
+```http
+  GET /api/weather/stats
+```
 
 | Query Parameters | Type     | Description                |
 | :-------- | :------- | :------------------------- |
