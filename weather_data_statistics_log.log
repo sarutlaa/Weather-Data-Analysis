@@ -1,0 +1,6 @@
+2024-04-02 05:00:26,715 - INFO - package: mysql.connector.plugins
+2024-04-02 05:00:26,715 - INFO - plugin_name: caching_sha2_password
+2024-04-02 05:00:26,723 - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2024-04-02 05:00:26,723 - INFO - Starting weather data statistics calculation...
+2024-04-02 05:00:44,075 - INFO - Database connection closed.
+2024-04-02 05:00:44,075 - INFO - Statistics calculation completed. Start time: 2024-04-02 05:00:26.723441, End time: 2024-04-02 05:00:44.075842, Duration: 0:00:17.352401
