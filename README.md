@@ -205,7 +205,7 @@ Running these tests ensures that the API handles query parameters correctly and 
 
   ![unittest](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/52ca9284-b627-44e6-8b51-75bacfcdd834)
 
-## Approach for AWS Deployment
+## Task 5: Approach for AWS Deployment ( Optional )
 Deploying an end-to-end weather data analysis and API service on AWS involves several stages, including database setup, data processing, and finally exposing the processed data via API.
 
 Task 1: Data Modeling.
