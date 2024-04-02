@@ -192,7 +192,18 @@ year = 2012, station_id : USC00137147
 
 ## APIs Unit Testing
 
-For unit testing, apis_unit_testing.py imports app.py to conduct tests on the query parameters specified for both API endpoints. This process utilizes pytest, TestCase, and the flask_testing Python libraries.
+In the unit testing script apis_unit_testing.py, the Flask application from app.py is tested to ensure its API endpoints are correctly processing various query parameters. Leveraging the pytest framework and the TestCase class from flask_testing, a suite of tests is applied to the weather API. These tests are strategically designed to confirm that the API responds with a 200 status code—a marker of success—across a range of requests:
 
+- /api/weather/ with no parameters.
+- /api/weather/ including a specific date.
+- /api/weather/ with a given station ID.
+- /api/weather/stats without parameters.
+- /api/weather/stats with a specified year.
+- /api/weather/stats with a specified station ID.
+- 
+Running these tests ensures that the API handles query parameters correctly and the endpoints are functioning as expected. The pytest.main() call at the end of the script triggers the execution of the tests when the script is run. All the testcases passed succesfully with the result as shown below.
+
+
+![unittest](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/52ca9284-b627-44e6-8b51-75bacfcdd834)
 
 ## Approach for AWS Deployment
