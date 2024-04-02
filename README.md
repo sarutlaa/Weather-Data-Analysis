@@ -48,7 +48,7 @@ CREATE TABLE weather_data (
 ## Task 2 : Data Ingestion
 
 
-The data files from wx_data were replicated locally after being sourced from the specified GitHub repository. The task of data ingestion in batches is performed by the Data_Ingestion.ipynb Python notebook. A total of 1,729,957 records were processed.
+The data files from wx_data were replicated locally after being sourced from the specified GitHub repository. The task of data ingestion in batches is performed by the Data_Ingestion.ipynb Python notebook. A total of 1,729,957 records were processed, with the start_time, end_time, duration of data ingestion as shown below.
 
 
 
@@ -57,7 +57,7 @@ The data files from wx_data were replicated locally after being sourced from the
 
 ### Screenshots
 
-![data_ingestion](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/c1fe0c31-c768-4abc-aec5-d81e1c7edee0)
+![data_ingestion1](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/c1fe0c31-c768-4abc-aec5-d81e1c7edee0)
 
 
 
@@ -84,11 +84,19 @@ CREATE TABLE weather_statistics (
 * total_precipitation: Total accumulated precipitation for the year (in centimeters)
 * unique_station_year: Ensures that there are no duplicate entries for a combination of station_id and year 
 
-The aggrgations have been performed and then ingested into weather_statistics table in the Data_Analysis.ipynb file. In total 4791 records have been processed and stored. Records with missing values have been ignored.The below output is stored in additional files folder of this repo.
+The aggrgations have been performed and then ingested into weather_statistics table in the Data_Analysis.ipynb file. In total 4791 records have been processed and stored. Records with missing values have been ignored.
+
+### Screenshots
+
+![data_ingestion2](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/ae9a80ec-4f7e-4915-9fe3-94c6ebb008e9)
+
+
+
 ```ruby
 SELECT station_id, count(*) FROM corteva.weather_statistics
 group by station_id;
 ```
+The year wise count output is stored in weather_stats_output.csv
 
 
 ## Task 4: Rest API
@@ -101,9 +109,9 @@ group by station_id;
 - Swagger(OpenAI) ( For Standardized Documentation)
 
 
-For this project, I've selected the Flask framework to facilitate interactions with two primary tables: weather_data and weather_statistics. These tables are accessed through designated API endpoints.
+For this project, the Flask framework has been chosen to manage interactions with two key tables: weather_data and weather_statistics, which are accessible via specific API endpoints. The app.py Python script is responsible for setting up these API endpoints.
 
-Within the weather_api directory, running app.py establishes connections to these endpoints. This setup allows users to query and filter data according to specified criteria.
+By executing app.py present in the weather_api directory, the application initiates connections to these endpoints. This configuration enables users to perform queries and apply filters based on defined criteria.
 
 ## API Reference
 
@@ -121,8 +129,21 @@ Add the table here
 ```http
   GET /api/weather/stats
 ```
+| Query Parameters | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `page` | `integer` | Optional. The page number of the results. Default is 1|
+| `per_page` | `integer` | Optional. The page number of the results. Default is 10|
+| `date` | `string` |Optional. Filters results to this specific date (format: YYYY-MM-DD)|
+| `station_id` | `string` | Optional. Filters results to the specified station ID|
 
 The specified endpoint accesses a collection of entries from the weather_statistics table in the corteva database. It allows for response manipulation through pagination and utilizes the following parameters for filtering.
+
+| Query Parameters | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `page` | `integer` | Optional. The page number of the results. Default is 1|
+| `per_page` | `integer` | Optional. The page number of the results. Default is 10|
+| `year` | `string` |Optional. Optional. Filters results to this specific year|
+| `station_id` | `string` | Optional. Filters results to the specified station ID|
 
 
 ## APIs Implementation Results
