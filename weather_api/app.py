@@ -11,8 +11,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 # Database configuration details, Please replace the host, user, password, database name accordingly.
 app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'root@123'
+app.config['MYSQL_USER'] = ''
+app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'corteva'
 mysql = MySQL(app)
 
