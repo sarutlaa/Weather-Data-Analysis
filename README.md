@@ -199,7 +199,7 @@ In the unit testing script apis_unit_testing.py, the Flask application from app.
 - /api/weather/stats without parameters.
 - /api/weather/stats with a specified year.
 - /api/weather/stats with a specified station ID.
-- 
+
 Running these tests ensures that the API handles query parameters correctly and the endpoints are functioning as expected. The pytest.main() call at the end of the script triggers the execution of the tests when the script is run. All the testcases passed succesfully with the result as shown below.
 
 
@@ -221,3 +221,10 @@ Task 4: REST API
 A REST API is created with a web framework like Flask to make the ingested and computed weather data accessible. AWS provides Elastic Beanstalk as a PaaS solution that simplifies the deployment and scalability of web applications and services, including REST APIs. By deploying the Flask application on Elastic Beanstalk, the API endpoints /api/weather and /api/weather/stats become available. These endpoints return JSON-formatted data and allow filtering based on date and station ID, with data served directly from the Amazon RDS database.
 
 This strategy includes using AWS services to create a scalable, efficient, and fully managed weather data service. From initial data modeling in RDS to final API deployment via Elastic Beanstalk, each component is designed to integrate seamlessly into the AWS ecosystem, resulting in a robust solution for weather data analysis and accessibility.
+
+### AWS Services that can be used:
+
+* Amazon RDS (Relational Database Service)
+* Amazon S3 (Simple Storage Service)
+* AWS Lambda
+* AWS Elastic Beanstalk
