@@ -155,15 +155,15 @@ I utilized Postman for testing the functionality of my API endpoints, ensuring d
 Utilizing Postman to assess the functionality of Weather API.
 1. GET method to access [http://127.0.0.1:5000/weather/api](http://localhost:5000/api/weather)
    
-![postman_weather_api](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/10dc0038-e225-4cd1-9e4d-3fe4f5676069)
+    ![postman_weather_api](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/10dc0038-e225-4cd1-9e4d-3fe4f5676069)
 3. GET method to access [http://127.0.0.1:5000/weather/api](http://localhost:5000/api/weather/?date=1985-01-01&station_id=USC00332098)
 
-![postman_weather_api_param](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/31c1ba1c-a69a-4b28-9522-f8f6dd5729bd)
+    ![postman_weather_api_param](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/31c1ba1c-a69a-4b28-9522-f8f6dd5729bd)
 4. GET method to access [http://127.0.0.1:5000/weather/api/stats](http://localhost:5000/api/weather/stats)
 
-- ![postman_warther_api_stats](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/2cd268c2-1584-4faa-8d8d-84be3176f3e4)
+    ![postman_warther_api_stats](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/2cd268c2-1584-4faa-8d8d-84be3176f3e4)
 4. GET method to access http://localhost:5000/api/weather/stats?year=1985&station_id=USC00253660
--![postman_weather_api_stats_param](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/96829b12-06a3-43d7-b16d-530428ef2c73)
+    ![postman_weather_api_stats_param](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/96829b12-06a3-43d7-b16d-530428ef2c73)
 
 ### Swagger(OpenAI) Screenshots
 
@@ -173,19 +173,17 @@ Utilizing Swagger UI to assess the functionality of Weather API. This interface 
 - Providing two GET endpoints for accessing weather data and weather statistics.
 - Outlining the data models for the API responses, including weather information and statistical data.
 
-![swagger_overview](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/e7cf1731-f23a-4c6c-bc49-98de8fec37ce)
+    ![swagger_overview](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/e7cf1731-f23a-4c6c-bc49-98de8fec37ce)
 
 1. GET method to access to http://127.0.0.1:5000/api/weather/?page=1&date=1996-01-02&station_id=USC00184108
+   Date : 1986-01-02, station_id : USC00114108
 
-Date : 1986-01-02, station_id : USC00114108
-
-![swagger_1](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/62fca457-2679-404f-b372-d841f8795e93)
+    ![swagger_1](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/62fca457-2679-404f-b372-d841f8795e93)
 
 2. GET method access to http://127.0.0.1:5000/api/weather/stats?year=2018&station_id=USC00137147
+    year = 2012, station_id : USC00137147
 
-year = 2012, station_id : USC00137147
-
-![swagger_2](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/869516e7-ee6e-4f1f-a62c-c3416ba9e931)
+    ![swagger_2](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/869516e7-ee6e-4f1f-a62c-c3416ba9e931)
 
 
 
@@ -204,6 +202,6 @@ In the unit testing script apis_unit_testing.py, the Flask application from app.
 Running these tests ensures that the API handles query parameters correctly and the endpoints are functioning as expected. The pytest.main() call at the end of the script triggers the execution of the tests when the script is run. All the testcases passed succesfully with the result as shown below.
 
 
-![unittest](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/52ca9284-b627-44e6-8b51-75bacfcdd834)
+    ![unittest](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/52ca9284-b627-44e6-8b51-75bacfcdd834)
 
 ## Approach for AWS Deployment
