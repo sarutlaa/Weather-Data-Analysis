@@ -145,7 +145,7 @@ The specified endpoint fetches a collection of records from the weather_data tab
 | :-------- | :------- | :------------------------- |
 | `page` | `integer` | Optional. The page number of the results. Default is 1|
 | `per_page` | `integer` | Optional. The page number of the results. Default is 10|
-| `year` | `string` |Optional. Optional. Filters results to this specific year|
+| `year` | `string` | Optional. Filters results to this specific year|
 | `station_id` | `string` | Optional. Filters results to the specified station ID|
 
 
@@ -213,15 +213,19 @@ Running these tests ensures that the API handles query parameters correctly and 
 Deploying an end-to-end weather data analysis and API service on AWS involves several stages, including database setup, data processing, and finally exposing the processed data via API.
 
 Task 1: Data Modeling.
+
 For relational data storage on AWS, Amazon RDS with a MySQL instance is an excellent option. It supports the use of familiar SQL-based data modeling. You would use the same data model structure as previously mentioned, which is ideal for relational databases such as MySQL offered by Amazon RDS.
 
-Task 2: Data Ingestion
+Task 2: Data Ingestion.
+
 Data collected initially can be efficiently stored in Amazon S3 buckets. To process this data, an AWS Lambda function is used. This serverless compute service enables code execution in response to events such as changes in data within an S3 bucket, making it ideal for data ingestion tasks. The Lambda function can read raw data files from S3, perform any necessary transformations, and then load the data into Amazon RDS MySQL database.
 
-Task 3: Data Analysis
+Task 3: Data Analysis.
+
 AWS Lambda can be used in conjunction with Amazon RDS to compute and store statistics. A Lambda function can be created to execute SQL queries that calculate the average temperature and total precipitation for each weather station on an annual basis. These results are then saved in a separate table within the RDS database, using a data model designed specifically for storing analytical results.
 
-Task 4: REST API
+Task 4: REST API.
+
 A REST API is created with a web framework like Flask to make the ingested and computed weather data accessible. AWS provides Elastic Beanstalk as a PaaS solution that simplifies the deployment and scalability of web applications and services, including REST APIs. By deploying the Flask application on Elastic Beanstalk, the API endpoints /api/weather and /api/weather/stats become available. These endpoints return JSON-formatted data and allow filtering based on date and station ID, with data served directly from the Amazon RDS database.
 
 This strategy includes using AWS services to create a scalable, efficient, and fully managed weather data service. From initial data modeling in RDS to final API deployment via Elastic Beanstalk, each component is designed to integrate seamlessly into the AWS ecosystem, resulting in a robust solution for weather data analysis and accessibility.
