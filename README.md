@@ -85,9 +85,9 @@ CREATE TABLE weather_statistics (
 * total_precipitation: Total accumulated precipitation for the year (in centimeters)
 * unique_station_year: Ensures that there are no duplicate entries for a combination of station_id and year. This constraint ensures that there are no duplicate entries for a combination of station_id and year, preventing redundancy and ensuring data integrity in the context of the weather data.
 
-The aggrgations have been performed and then ingested into weather_statistics table in the Data_Analysis.ipynb file. In total 4791 records have been processed and stored. Records with missing values have been ignored.
+The aggrgations( Average maximum temperature , Average minimum temperature , Total accumulated precipitation  for each year and for every station) have been performed and then ingested into weather_statistics table in the Data_Analysis.ipynb file. In total 4791 records have been processed and stored. Records with missing values have been ignored.
 
-### Screenshots
+### Sample Query
 
 ![data_ingestion2](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/ae9a80ec-4f7e-4915-9fe3-94c6ebb008e9)
 
