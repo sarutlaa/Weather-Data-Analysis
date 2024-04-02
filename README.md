@@ -169,7 +169,7 @@ Utilizing Postman to assess the functionality of Weather API.
     ![postman_warther_api_stats](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/2cd268c2-1584-4faa-8d8d-84be3176f3e4)
    
 4. GET method to access http://localhost:5000/api/weather/stats?year=1985&station_id=USC00253660
-5. 
+ 
    *year = 1985, station_id : USC00253660*
     ![postman_weather_api_stats_param](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/96829b12-06a3-43d7-b16d-530428ef2c73)
 
