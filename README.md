@@ -87,11 +87,11 @@ CREATE TABLE weather_statistics (
 
 The aggrgations( Average maximum temperature , Average minimum temperature , Total accumulated precipitation  for each year and for every station) have been performed and then ingested into weather_statistics table in the Data_Analysis.ipynb file. In total 4791 records have been processed and stored. Records with missing values have been ignored.
 
-### Sample Query
+
 
 ![data_ingestion2](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/ae9a80ec-4f7e-4915-9fe3-94c6ebb008e9)
 
-
+### Sample Query
 
 ```ruby
 SELECT station_id, count(*) FROM corteva.weather_statistics
