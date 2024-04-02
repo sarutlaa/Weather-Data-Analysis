@@ -57,7 +57,8 @@ The data files from wx_data were replicated locally after being sourced from the
 
 ### Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![data_ingestion](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/c1fe0c31-c768-4abc-aec5-d81e1c7edee0)
+
 
 
 ## Task 3: Data Analysis
