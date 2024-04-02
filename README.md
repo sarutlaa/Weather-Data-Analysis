@@ -58,7 +58,8 @@ A total of 1,729,957 records were processed, with the start_time, end_time, dura
 
 ### Screenshots
 
-![data_ingestion1](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/c1fe0c31-c768-4abc-aec5-d81e1c7edee0)
+![data_ingestion1](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/52d5b5c4-ec6e-4061-bbdc-d33c005d0927)
+
 
 
 
@@ -88,8 +89,9 @@ CREATE TABLE weather_statistics (
 The aggrgations( Average maximum temperature , Average minimum temperature , Total accumulated precipitation  for each year and for every station) have been performed and then ingested into weather_statistics table in the Data_Analysis.ipynb file. In total 4791 records have been processed and stored. Records with missing values have been ignored.
 
 
+<img width="724" alt="data_ingestion2" src="https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/99d362f8-aa67-4493-878e-0d0332a2a365">
 
-![data_ingestion2](https://github.com/sarutlaa/Weather-Data-Analysis/assets/141533429/ae9a80ec-4f7e-4915-9fe3-94c6ebb008e9)
+
 
 ### Sample Query
 
