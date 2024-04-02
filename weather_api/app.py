@@ -11,8 +11,8 @@ logging.basicConfig(level=logging.DEBUG)
 
 # Database configuration details, Please replace the host, user, password, database name accordingly.
 app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = ''
-app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'root@123'
 app.config['MYSQL_DB'] = 'corteva'
 mysql = MySQL(app)
 
@@ -87,9 +87,11 @@ class WeatherList(Resource):
 
         return [{'id': row[0], 'date': row[1], 'max_temp': row[2], 'min_temp': row[3], 'precipitation': row[4], 'station_id': row[5]} for row in results]
 
+
+
 @ns.route('/stats')
 class WeatherStats(Resource):
-     """
+    """
     Class representing the API endpoint for retrieving weather statistics.
 
     Attributes:
@@ -98,17 +100,19 @@ class WeatherStats(Resource):
     Methods:
         get(self): Retrieves weather statistics based on specified query parameters.
     """
+
     @ns.doc('weather_statistics')
     @ns.expect(api.parser().add_argument('year', type=int, help='Filter by year')
                .add_argument('station_id', type=str, help='Filter by station ID'))
     @ns.marshal_list_with(statistics_model)
     def get(self):
-         """
+        """
         Retrieve weather statistics based on specified query parameters.
 
         Returns:
             List: A list of dictionaries representing weather statistics.
         """
+
         parser = request.args
         year = parser.get('year', type=int)
         station_id = parser.get('station_id', type=str)
@@ -141,7 +145,6 @@ class WeatherStats(Resource):
             })
 
         return stats
-
 
 if __name__ == '__main__':
     app.run(debug=True)
